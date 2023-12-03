@@ -39,12 +39,14 @@ public class SaveToXmlFileServlet extends HttpServlet {
                 jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
                 // Specify the path where the XML file will be saved
-                File file = new File("src/main/resources/" + name + "_Employee.xml");
+                File file = new File("C:\\Users\\Sayed Khaled\\Downloads\\Other\\" + name + "_Employee.xml");
                 jaxbMarshaller.marshal(employee, file);
 
                 request.setAttribute("message", "Employee saved to XML file successfully!");
             } catch (JAXBException e) {
                 e.printStackTrace();
+                request.setAttribute("message", e.getMessage());
+            } catch (Exception e) {
                 request.setAttribute("message", e.getMessage());
             }
         } else {

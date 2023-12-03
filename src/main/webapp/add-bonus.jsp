@@ -23,6 +23,16 @@
         .employee-details {
             margin-bottom: 10px;
         }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #337ab7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -40,5 +50,7 @@
 <% } else { %>
 <p>no employee found.</p>
 <% } %>
+<a href="employee-management.jsp" class="back-link">Back to Employee Management</a>
+
 </body>
 </html>
